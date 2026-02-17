@@ -1,0 +1,30 @@
+qwen2.5:
+  hf_key: "Qwen/Qwen2.5-32B-Instruct"
+  question_start_tag: "<|im_start|>user\n"
+  question_end_tag: "<|im_end|>"
+  ignore_index: -100
+  image_patch_token: "<|vision_start|><|image_pad|><|vision_end|>"
+  answer_tag: "<|im_start|>assistant\n"
+  system_tag: "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n"
+  flash_attention2: "true"
+  gradient_checkpointing: "true"
+deepseek:
+  hf_key: "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+  question_start_tag: "<｜User｜>"
+  question_end_tag: "<|eot_id|>"
+  ignore_index: -100
+  image_patch_token: ""
+  answer_tag: "<｜Assistant｜>"
+  system_tag: "<|begin_of_text|>"
+  flash_attention2: "true"
+  gradient_checkpointing: "true"
+llama-3.1:
+  hf_key: "meta-llama/Llama-3.1-8B-Instruct"
+  question_start_tag: "<|start_header_id|>user<|end_header_id|>\n\n"
+  question_end_tag: "<|eot_id|>"
+  ignore_index: -100
+  image_patch_token: ""
+  answer_tag: "<|start_header_id|>assistant<|end_header_id|>\n\n"
+  system_tag: "<|begin_of_text|>"
+  flash_attention2: "true"
+  gradient_checkpointing: "true"

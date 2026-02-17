@@ -1,0 +1,38 @@
+model_id: "path to qwen2.5-instruct"
+model_family: qwen2.5
+
+LoRA:
+  r: 0
+  alpha: 128
+  dropout: 0.05
+
+used_policy: True
+used_strategy: True
+step_token: <step>,</step>
+answer_token: <answer>,</answer>
+
+loss_type: grad_ascent
+tune_vision_tower: False
+tune_mm_projector: True
+tune_language_model: True
+data_path: "path to training data"
+split: with_strategy_policy
+batch_size: 1
+gradient_accumulation_steps: 32
+max_grad_norm: 1.0
+num_epochs: 2
+max_length: 4096
+save_dir: models/qwen2.5-sft
+save_steps: 100
+lr: 1e-6
+weight_decay: 0.01
+seed: 233
+workers: 6
+lr_scheduler_type: "cosine"
+warmup_ratio: 0.00
+max_train_steps: -1
+report_to: "wandb"
+resume_from_checkpoint: ""
+
+
+

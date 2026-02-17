@@ -1,0 +1,18 @@
+actor_model_dir: "path to the actor model"
+worker_num: 32
+worker_prompt_num: 100
+temperature: 1.2
+top_p: 0.9
+top_k: 50
+max_tokens: 2048
+seed: 42
+stop_tokens: ['</step>', '</answer>', '<|im_end|>']
+end_tokens: ['</answer>', '<|im_end|>']
+train_prompt_path: "path to the training data"
+output_path: "./mct_data"
+max_depth: 4
+generate_samples_number: 4
+generate_samples_number_list: [4, 4, 4, 4]
+use_cache: True
+cache_dir: "./cache"
+log_file: "./log/log.txt"

@@ -1,0 +1,12 @@
+python ../tree_sample/generate_dpo_traindata.py \
+    --seed 42 \
+    --mcts_path "tree_data/tree_data.json" \
+    --traindata_type "dpo" \
+    --v_threshold 0.5 \
+    --actor_data_path "actor_train_data/dpo_train_data.json" \
+    --tokenizer_path "" \
+    --max_tokens 4096 \
+    --max_child_num 4 \
+    --min_visit_times 4 \
+    --good_value_threshold 0.8 \
+    --max_sft_label 8
