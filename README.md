@@ -17,6 +17,84 @@ The framework of ARMOR consists of the following steps: (1) Construct the Meticu
 
 The training data is avaliable at https://huggingface.co/datasets/Ethan271/SafeReasoning-Train.
 
+### Preparation
+
+Prepare the general environment.
+
+```shell
+conda create -n armor python=3.12
+
+conda activate armor
+
+pip install -r requirments.txt
+```
+
+Download models (the base Qwen2.5 model and the armor pretrained model) and datasets (training data of armor).
+
+```shell
+./download.sh
+```
+
+### Training
+
+Conduct SFT on the base model with the armor training data.
+
+```shell
+cd sft
+```
+
+Modify the configuration of the training, especially the path to the base model and the training data.
+
+
+Then run the training script:
+
+```shell
+./scripts/finetune.sh
+```
+
+The sft model will be save in `./outputs`.
+
+### Sampling Preference Data
+First prepare the environment for the data sampling.
+
+```shell
+cd ../tree_sample
+
+conda create -n armor_sample python=3.12
+
+conda activate armor_sample
+
+pip install -r requirments.txt
+```
+
+Then follow the `README.md` to sample preference data.
+
+### DPO
+Use the sampled preference data to conduct the step-wise dpo on the model.
+
+First prepare the environment for step-dpo.
+
+```shell
+cd ../dpo
+
+conda create -n armor_dpo python=3.12
+
+conda activate armor_dpo
+
+pip install -r requirments.txt
+```
+
+Prepare the traing configeration in `./bash_scrips/qwen2_7b_step_dpo.sh`, especially the path to the base model (e.g. sft model) and the path to the preference data from the tree-based sampling.
+
+Then run the following script to conduct the step-wise dpo:
+
+```shell
+./run_dpo.sh
+```
+
+The DPO-tuned model can be then utilized for the tree-based sampling in the next iteration and then the iterative improvement can be leveraged.
+
+
 ### TO DO
 - [ ] Release the code for data construction.
 - [x] Release ARMOR's training data
