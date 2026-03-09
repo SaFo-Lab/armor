@@ -31,9 +31,6 @@ pip install -r requirments.txt
 
 Download models (the base Qwen2.5 model and the armor pretrained model) and datasets (training data of armor).
 
-```shell
-./download.sh
-```
 
 ### Training
 
@@ -94,6 +91,11 @@ Then run the following script to conduct the step-wise dpo:
 
 The DPO-tuned model can be then utilized for the tree-based sampling in the next iteration and then the iterative improvement can be leveraged.
 
+### Inference
+Use the example `inference.py` for the inference:
+```shell
+python inference.py
+```
 
 ### TO DO
 - [ ] Release the code for data construction.

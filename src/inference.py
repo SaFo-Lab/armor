@@ -38,8 +38,8 @@ Safety Policy:
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
-    parser.add_argument( "--model_path",type=str, default="./download/model/SafeReasoning-7b")
-    parser.add_argument( "--data_path",type=str, default="/download/dataset/wildjailbreak.json")
+    parser.add_argument( "--model_path",type=str, default="SafeReasoning-7b")
+    parser.add_argument( "--data_path",type=str, default="wildjailbreak.json")
     parser.add_argument( "--save_path",type=str, default="./results.json")
     parser.add_argument( "--batch_size",type=int, default=100)
     args = parser.parse_args()
