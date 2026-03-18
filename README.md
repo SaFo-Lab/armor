@@ -1,5 +1,5 @@
-# ARMOR: Aligning Safe and Secure Large Language Models via Meticulous Reasoning
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2507.11500) 
+# [ICLR 2026] ARMOR: Aligning Safe and Secure Large Language Models via Meticulous Reasoning
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2507.11500v2) 
 
 ![Overview.](assets/overview.png)
 
