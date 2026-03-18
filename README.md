@@ -14,9 +14,9 @@ The framework of ARMOR consists of the following steps: (1) Construct the Meticu
 
 ### ARMOR Data and Model
 
-The training data is available at [🤗Armor-Data](https://huggingface.co/datasets/Ethan271/SafeReasoning-Train).
+The training data is available at [🤗ARMOR-Data](https://huggingface.co/datasets/Ethan271/SafeReasoning-Train).
 
-The model is available at [🤗Armor-7b](https://huggingface.co/Ethan271/Armor-7b).
+The model is available at [🤗ARMOR-7b](https://huggingface.co/Ethan271/Armor-7b).
 
 
 ### Preparation
