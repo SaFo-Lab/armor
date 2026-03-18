@@ -13,9 +13,12 @@ Large Language Models (LLMs) have demonstrated remarkable generative capabilitie
 The framework of ARMOR consists of the following steps: (1) Construct the Meticulous Reasoning steps with jailbreak prompts, their coordinate ground truth (GT) jailbreak strategy and intent, and the safety policy; (2) Format the reasoning steps with inputs involving the user's prompts and the system prompt consists of a dynamic strategy library and the safety policy; (3) Train the base model to get the ARMOR model; (4) Conduct inference of ARMOR with a custom strategy library and the safety policy; (5) Conduct test-time scaling with the DPO model and PRM trained on preference data generated from grounded tree sampling.
 
 
-### ARMOR Training Data
+### ARMOR Data and Model
 
 The training data is avaliable at https://huggingface.co/datasets/Ethan271/SafeReasoning-Train.
+
+The model is avaliable at https://huggingface.co/Ethan271/Armor-7b.
+
 
 ### Preparation
 
@@ -100,4 +103,4 @@ python inference.py
 ### TO DO
 - [ ] Release the code for data construction.
 - [x] Release ARMOR's training data
-- [ ] Release ARMOR's model weights
+- [x] Release ARMOR's model weights
